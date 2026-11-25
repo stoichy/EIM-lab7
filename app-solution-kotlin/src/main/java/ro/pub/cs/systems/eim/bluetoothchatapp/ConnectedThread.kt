@@ -11,14 +11,14 @@ import java.io.InputStream
 import java.io.OutputStream
 
 class ConnectedThread(
-        private val mainActivity: MainActivity,
-        private val socket: BluetoothSocket
+    private val mainActivity: MainActivity,
+    private val socket: BluetoothSocket
 ) : Thread() {
 
     private val inputStream: InputStream?
     private val outputStream: OutputStream?
 
-            init {
+    init {
         var tmpIn: InputStream? = null
         var tmpOut: OutputStream? = null
 
@@ -55,7 +55,7 @@ class ConnectedThread(
         while (true) {
             try {
                 bytes = inputStream?.read(buffer) ?: break
-                        val incomingMessage = String(buffer, 0, bytes)
+                val incomingMessage = String(buffer, 0, bytes)
                 mainActivity.runOnUiThread {
                     mainActivity.addChatMessage("$remoteDeviceName: $incomingMessage")
                 }

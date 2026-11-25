@@ -23,6 +23,13 @@
         android:text="Send"/>
 
     <Button
+        android:id="@+id/startServerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:text="Start Server"/>
+
+    <Button
         android:id="@+id/listDevicesButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

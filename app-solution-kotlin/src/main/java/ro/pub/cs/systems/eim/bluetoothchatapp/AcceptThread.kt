@@ -8,7 +8,7 @@ import android.content.pm.PackageManager
 import android.util.Log
 import androidx.core.app.ActivityCompat
 import java.io.IOException
-import java.util.*
+import java.util.UUID
 
 class AcceptThread(
         private val mainActivity: MainActivity,
